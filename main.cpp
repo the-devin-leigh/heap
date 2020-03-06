@@ -1,3 +1,8 @@
+/*Author: Devin Leigh
+ *Project: heap
+ *Date: 3/5/2020
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string.h>
@@ -61,7 +66,7 @@ int main(){
     cin >> fileCount;
     cin.clear();
     cin.ignore(100, '\n');
-    int harray[atoi(fileCount)];
+    int harray[atoi(fileCount)]; //set array size to int number
     
     ifstream File;
     File.open(filepath);
@@ -73,7 +78,7 @@ int main(){
 
     File.close();
 
-    int n = sizeof(harray)/sizeof(harray[0]);
+    int n = sizeof(harray)/sizeof(harray[0]); //total elements in array
     sort(harray, n);
     cout << "Sorted." << endl;
     printHeap(harray, n);
@@ -87,7 +92,7 @@ int main(){
     cin >> exitCon;
     cin.clear();
     cin.ignore(100, '\n');
-    int harray[atoi(exitCon)];
+    int harray[atoi(exitCon)]; //set array size to int number
     while(lol != atoi(exitCon)){
       char* num = new char[10];
       cout << "Enter a number between 1 and 1000: ";
@@ -101,7 +106,7 @@ int main(){
 
     
 
-    int n = sizeof(harray)/sizeof(harray[0]);
+    int n = sizeof(harray)/sizeof(harray[0]); //number of elements in array -> total memory/one element
     
     sort(harray, n);
     cout << "Sorted." << endl;
